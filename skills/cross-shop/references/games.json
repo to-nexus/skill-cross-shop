@@ -1,0 +1,61 @@
+{
+  "$schema": "internal: see references/cross-shop.md §2 for field semantics",
+  "version": "0.1.0-rc.skeleton",
+  "note": "All per-game endpoint slots are intentionally null. Phase-1 capture (DevTools network tap on logged-in rohan2/seal-m/rom shops) populates them. See references/cross-shop.md for the playbook.",
+  "games": {
+    "rohan2": {
+      "slug": "rohan2",
+      "displayName": "ROHAN2",
+      "subdomain": "rohan2.cross.shop",
+      "homepage": "https://rohan2.cross.shop/",
+      "paymentRails": ["CROSS", "BNB"],
+      "apiBase": null,
+      "loginPath": null,
+      "productsPath": null,
+      "quotePath": null,
+      "confirmPath": null,
+      "ordersPath": null,
+      "statusPath": null,
+      "sessionHeader": null,
+      "escrowCROSS": null,
+      "escrowBSC": null,
+      "_capture_status": "phase_1_pending"
+    },
+    "seal-m": {
+      "slug": "seal-m",
+      "displayName": "Seal-M",
+      "subdomain": "seal-m.cross.shop",
+      "homepage": "https://seal-m.cross.shop/",
+      "paymentRails": ["CROSS", "BNB"],
+      "apiBase": null,
+      "loginPath": null,
+      "productsPath": null,
+      "quotePath": null,
+      "confirmPath": null,
+      "ordersPath": null,
+      "statusPath": null,
+      "sessionHeader": null,
+      "escrowCROSS": null,
+      "escrowBSC": null,
+      "_capture_status": "phase_1_pending"
+    },
+    "rom": {
+      "slug": "rom",
+      "displayName": "ROM",
+      "subdomain": "rom.cross.shop",
+      "homepage": "https://rom.cross.shop/",
+      "paymentRails": ["CROSS", "BNB"],
+      "apiBase": null,
+      "loginPath": null,
+      "productsPath": null,
+      "quotePath": null,
+      "confirmPath": null,
+      "ordersPath": null,
+      "statusPath": null,
+      "sessionHeader": null,
+      "escrowCROSS": null,
+      "escrowBSC": null,
+      "_capture_status": "phase_1_pending"
+    }
+  }
+}

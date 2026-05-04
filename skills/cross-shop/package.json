@@ -1,0 +1,12 @@
+{
+  "name": "cross-shop",
+  "version": "0.1.0-rc.skeleton",
+  "private": true,
+  "type": "module",
+  "description": "cross.shop game-shop driver — bundled by the cross-shop Claude skill (skeleton; Phase-1 captures required before write subcommands work).",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "viem": "^2.21.0",
+    "dotenv": "^16.4.5"
+  }
+}

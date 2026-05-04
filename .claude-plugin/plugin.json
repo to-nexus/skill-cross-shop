@@ -1,0 +1,19 @@
+{
+  "name": "cross-shop",
+  "description": "cross.shop game web-shop driver — drives the same backend that powers https://www.cross.shop and its per-game subdomains rohan2.cross.shop, seal-m.cross.shop, rom.cross.shop. Subcommands: games, products, login (Game UUID), quote, purchase (CROSS or BNB rail), orders, status. v0.1-rc-skeleton ships the registry-driven scaffold; only `games` works today, every other subcommand exits 3 with `phase_1_not_captured` until references/cross-shop.md is followed to populate references/games.json. Triggers on phrases like 'rohan2 샵에서 살 수 있는 패키지 목록 보여줘', 'seal-m 샵의 weekly costume 상품 BNB로 사줘', 'ROM 게임 상품 CROSS로 결제해', 'list available games on cross.shop', 'show my cross.shop order history', 'buy rohan2 package with CROSS', 'cross.shop game shops'.",
+  "author": {
+    "name": "to-nexus"
+  },
+  "homepage": "https://github.com/to-nexus/skill-cross-shop",
+  "keywords": [
+    "cross-shop",
+    "game-shop",
+    "rohan2",
+    "seal-m",
+    "rom",
+    "evm",
+    "cross-chain",
+    "bsc",
+    "payment-escrow"
+  ]
+}

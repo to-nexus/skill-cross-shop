@@ -1,0 +1,19 @@
+# secrets — never commit
+.env
+.env.local
+.env.*.local
+.auth/
+.session/
+.sessions/
+
+# tooling
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.log
+.DS_Store
+.tmp/
+
+# OS
+Thumbs.db
