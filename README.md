@@ -13,8 +13,6 @@ A Claude Code skill that drives the **cross.shop** game web-shop platform (`http
 >
 > `purchase --pay CARD` errors with `unsupported_rail_v0_1` (hosted-checkout / 3DS deferred to v0.2).
 
-> 🔒 **Private repository.** Owner (`to-nexus`) installs via `gh auth login`. Others need collaborator access or `GITHUB_TOKEN`.
-
 ---
 
 ## Install — Recommended (via Marketplace)
