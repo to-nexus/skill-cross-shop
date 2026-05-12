@@ -485,6 +485,6 @@ For purchase, use the cheapest product on the cheapest rail first. Set `MAX_PURC
 
 ## 12. Where to ask if you get stuck
 
-- The five sibling skills (`skill-cross-dex-trade`, `skill-cross-prediction`, `skill-cross-rewards`, `skill-cross-crossd`, `skill-`) all use the same EOA + viem + raw-HTTPS pattern. Read their `references/` for capture-style examples.
+- The four sibling skills (`skill-cross-dex-trade`, `skill-cross-prediction`, `skill-cross-rewards`, `skill-cross-crossd`) all use the same EOA + viem + raw-HTTPS pattern. Read their `references/` for capture-style examples.
 - `cross-skills/skill-cross-crossd/references/cross-crossd.md` is the closest analog: it documents the `bridge-api.crosstoken.io` endpoint table and the on-chain bridge router ABI. Same skeleton applies here.
 - `CONTEXT.md` (repo root) lists the precise terminology to use in code and docs (e.g. `cross.shop` lowercase, `payment escrow` not `escrow router`, `orderId` not `txRef`).

@@ -22,7 +22,7 @@ A Claude Code skill that drives the **cross.shop** game web-shop platform (`http
 /plugin install cross-shop@cross-skills-suite
 ```
 
-Part of the [CROSS Skills Suite](https://github.com/to-nexus/cross-skills-suite) — installs alongside `cross-rewards`, `cross-dex-trade`, `cross-prediction`, `cross-crossd`, ``.
+Part of the [CROSS Skills Suite](https://github.com/to-nexus/cross-skills-suite) — installs alongside `cross-rewards`, `cross-dex-trade`, `cross-prediction`, `cross-crossd`.
 
 ---
 
