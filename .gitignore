@@ -16,3 +16,8 @@ pnpm-lock.yaml
 
 # OS
 Thumbs.db
+
+# Secrets/session/auth artifacts — NEVER commit (added by security audit)
+!.env.example
+.auth
+*.session
