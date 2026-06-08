@@ -86,26 +86,21 @@ Two distinct credentials are involved: the **EOA private key** (signs the on-cha
 
 ### 3.1 PRIVATE_KEY
 
-Resolve in this order. **Never echo the private key back to the user, never write it into the conversation transcript, never log it.**
+Resolve in this order. **Never echo wallet secrets back to the user, never write them into the conversation transcript, never log them, and never ask the user to paste them into chat.**
 
-1. **`process.env.PRIVATE_KEY`** — passed via the spawned Bash invocation.
+1. **`process.env.PRIVATE_KEY`** — inherited by the spawned process, not typed into the chat transcript or shell argv.
 2. **`./.env` in the user's current working directory** — read `PRIVATE_KEY` and (optionally) `WALLET_ADDRESS`, `CROSS_RPC_URL`, `BSC_RPC_URL`, `MAX_PURCHASE_NOTIONAL`, `CONFIRM_THRESHOLD`, `MIN_GAS_NATIVE`, `RECEIPT_TIMEOUT`.
 3. **`$HOME/.claude/skills/cross-shop/.env`** — same vars, used as the personal default.
-4. **Ask the user** — only if all three sources lack `PRIVATE_KEY` and the requested subcommand actually needs it. Use this exact prompt:
+4. **Missing signer config** — if all three sources lack `PRIVATE_KEY` and the requested subcommand needs it, stop. Tell the user to create `~/.claude/skills/cross-shop/.env` locally with:
 
-   > "I need an EOA private key (0x-prefixed, 64 hex chars) to sign a cross.shop purchase tx.
-   > **Option A (recommended):** stop here, paste this into `~/.claude/skills/cross-shop/.env`:
-   > ```
-   > PRIVATE_KEY=0x...
-   > MAX_PURCHASE_NOTIONAL=100
-   > CONFIRM_THRESHOLD=10
-   > MIN_GAS_NATIVE=0.001
-   > ```
-   > then re-ask. I won't see it.
-   >
-   > **Option B (one-shot):** paste it now. It will be passed to the script via process env only and will NOT be saved to disk by me. It will appear once in this transcript."
+   ```bash
+   PRIVATE_KEY=<0x-prefixed-64-hex-secret>
+   MAX_PURCHASE_NOTIONAL=100
+   CONFIRM_THRESHOLD=10
+   MIN_GAS_NATIVE=0.001
+   ```
 
-   If the user picks B, accept the PK as a string, **do not echo it**, pass it to the script as `PRIVATE_KEY=...` on the same Bash command line, and after the action tell the user to consider rotating the key if the transcript is shared.
+   Then ask them to re-run the request. Do not collect the secret in chat, and do not pass it on the command line.
 
 Validation: the value must match `^0x[0-9a-fA-F]{64}$`. Reject otherwise without retrying silently. Read-path subcommands NEVER prompt for a PK.
 

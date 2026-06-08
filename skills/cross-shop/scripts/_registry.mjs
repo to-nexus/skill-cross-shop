@@ -70,7 +70,7 @@ export function requireSlot(slug, key) {
     );
     err.code = 'phase_1_not_captured';
     err.missing = `${slug}.${key}`;
-    err.hint = 'see references/cross-shop.md to capture this endpoint via DevTools';
+    err.hint = 'see the maintainer-only endpoint discovery notes in references/cross-shop.md';
     err.exitCode = 3;
     throw err;
   }
